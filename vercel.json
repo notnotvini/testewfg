@@ -7,12 +7,12 @@
       "config": {}
     }
   ],
-  "redirects": [
-    {
-      "source": "/:path(.*)",
-      "destination": "https://multiplaescolhaconcursos.com.br/:path"
+  "rewrites": [
+    { 
+      "source": "/:path(.*)", 
+      "destination": "/:path" 
       "permanent": true,
       "statusCode": 301
     }
-  ] 
+  ]
 }

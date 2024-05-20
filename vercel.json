@@ -9,15 +9,16 @@
   ],
   "redirects": [
     {
-      "source": "/(.*)",
+      "source": "/:path(.*)",
+      "destination": "https://multiplaescolhaconcursos.com.br/:path",
+      "permanent": true,
       "has": [
         {
           "type": "host",
-          "value": "https://multiplaescolhaconcursos.com.br/"
+          "value": "https://teste-wfg.vercel.app/index.html"
         }
       ],
-      "destination": "https://multiplaescolhaconcursos.com.br/$1",
-      "permanent": true
+      "statusCode": 301
     }
   ]
 }

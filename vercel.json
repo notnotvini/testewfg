@@ -9,8 +9,14 @@
   ],
   "redirects": [
     {
-      "source": "/:path*",
-      "destination": "https://multiplaescolhaconcursos.com.br/:path*",
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "https://multiplaescolhaconcursos.com.br/"
+        }
+      ],
+      "destination": "https://multiplaescolhaconcursos.com.br/$1",
       "permanent": true
     }
   ]

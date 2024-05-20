@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "rewrites": [
+  "redirects": [
     {
       "source": "/(.*)",
       "destination": "https://multiplaescolhaconcursos.com.br/:1",
-      "has": [
+      "statusCode": 301,
+      "conditions": [
         {
           "type": "host",
-          "value": "testewfg.vercel.app"
+          "value": "https://testewfg.vercel.app/"
         }
       ]
     }

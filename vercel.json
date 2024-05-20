@@ -1,23 +1,9 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "public" }
-    }
-  ],
   "redirects": [
     {
       "source": "/:path(.*)",
-      "destination": "https://multiplaescolhaconcursos.com.br/:path",
+      "destination": "https://multiplaescolhaconcursos.com.br/:path"
       "permanent": true,
-      "has": [
-        {
-          "type": "host",
-          "value": "https://teste-wfg.vercel.app/index.html"
-        }
-      ],
       "statusCode": 301
     }
   ]

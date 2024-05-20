@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "https://multiplaescolhaconcursos.com.br/:1",
+      "has": [
+        {
+          "type": "host",
+          "value": "testewfg.vercel.app"
+        }
+      ]
+    }
+  ]
+}

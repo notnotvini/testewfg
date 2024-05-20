@@ -10,7 +10,7 @@
   "redirects": [
     {
       "source": "/:path*",
-      "destination": "https://sitenovo.com.br/:path*",
+      "destination": "https://multiplaescolhaconcursos.com.br/:path*",
       "permanent": true
     }
   ]

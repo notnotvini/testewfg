@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Múltipla Escolha Concursos (WFG)</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✅</text></svg>">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #19097A;
+  font-weight: bold;
+}
+
+#grid {
+	display: grid;
+  height: calc(var(--vh, 1vh) * 100);
+	grid-template-rows: 20% 20% 30% 20% 10%;
+	grid-template-columns: 95vw 2vw 3vw;
+	gap: 0;
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	width: 100vw;
+  text-align: center;
+}
+
+#div1 {
+	grid-area: 2/1/3/2;
+  max-width: 70%;
+}
+
+h1 {
+  font-size: 1.6em;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+}
+
+#div1 img {
+  height: 250px;
+}
+
+#div1 h2 {
+  text-align: center;
+  font-style: normal;
+}
+
+#div2 {
+	grid-area: 3/1/4/2;
+  text-align: center;
+  max-width: 90%;
+}
+
+#div3 img {
+  width: 250px;
+  height: auto;
+  max-width: 90%;
+}
+
+h2 {
+  font-size: 1.1em;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1em;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+#div3 {
+	grid-area: 4/1/5/2;
+}
+
+#div4 {
+	grid-area: 5/1/6/2;
+}
+
+h4 {
+  font-size: 1em;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+#div5 {
+	grid-area: 1/2/6/3;
+  background-color: #031299;
+  height: 100%;
+  width: 100%;
+}
+
+#div6 {
+	grid-area: 1/3/6/4;
+	background-color: #19097a;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  #background {
+    height: 300px;
+    width: 300px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.0em;
+  }
+
+  h3 {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 600px) {
+  #background {
+    height: 250px;
+    width: 250px;
+  }
+}
+  </style>
+</head>
+<body>
+  <div id="grid">
+    <div id="div1">
+      <p><img src="./logo.png" alt="Múltipla Escolha Concursos"></p>
+    </div>
+    <div id="div2">
+      <h2>Olá! Você está sendo redirecionado para o novo domínio.</h2>
+      <h1>Seja bem-vindo ao Múltipla Escolha Concursos /WFG.</h1>
+      <h3>Caso não seja redirecionado em <span id="seconds"></span> segundos: <a href="https://www.multiplaescolhaconcursos.com.br/">clique aqui!</a></p></h3>
+    </div>
+    <div id="div3">
+      <div id="separador"></div>
+    </div>
+    <div id="div4">
+      <h4>
+        <a href="https://wa.me/5548998360020?text=Ol%C3%A1%21%20Gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20os%20cursos." target="_blank">
+        <img id="whatsapp" src="./whatsapp.png" alt="Converse pelo WhatsApp">
+        </a>
+      </h4>
+    </div>
+    <div id="div5"></div>
+    <div id="div6"></div>
+  </div>  
+  
+  <script>
+    let seconds = 15;
+    let interval = setInterval(() => {
+      seconds--;
+      document.getElementById('seconds').innerText = seconds;
+      if (seconds === 0) {
+        clearInterval(interval);
+        window.location.href = 'https://www.multiplaescolhaconcursos.com.br/';
+      }
+    }, 1000);
+
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  </script>
+
+</body>
+</html>

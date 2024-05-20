@@ -172,24 +172,24 @@ h4 {
   </div>  
   
   <script>
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    let path = window.location.pathname;
+    let partes = path.split('/');
+    let valor = partes[partes.length - 1];
+    let link = document.getElementById('novoLink');
+    link.href = link.href + valor;
+
     let seconds = 15;
     let interval = setInterval(() => {
       seconds--;
       document.getElementById('seconds').innerText = seconds;
       if (seconds === 0) {
         clearInterval(interval);
-        window.location.href = 'https://www.multiplaescolhaconcursos.com.br/';
+        window.location.href = link;
       }
     }, 1000);
-
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-    var path = window.location.pathname;
-    var partes = path.split('/');
-    var valor = partes[partes.length - 1];
-    var link = document.getElementById('novoLink');
-    link.href = link.href + valor;
   </script>
 
 </body>

@@ -15,12 +15,4 @@
       "statusCode": 301
     }
   ] 
-  "rewrites": [
-    { 
-      "source": "/:path(.*)", 
-      "destination": "/:path" 
-      "permanent": true,
-      "statusCode": 301
-    }
-  ]
 }

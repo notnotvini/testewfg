@@ -176,16 +176,16 @@ h4 {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 
     var path = window.location.pathname;
-    var indexPrimeiraBarra = path.indexOf('/', 1); // Começa a busca a partir do segundo caractere para ignorar o primeiro "/" no início da URL
+    var indexComBr = path.indexOf('.com.br');
     var valor;
-    if (indexPrimeiraBarra !== -1) {
-      valor = path.substring(indexPrimeiraBarra + 1); // Adiciona 1 para começar a partir do caractere após a barra
-    } else {
-      valor = path; // Se não houver barra após o ".com.br", mantém o caminho original
+      if (indexComBr !== -1) {
+        valor = path.substring(indexComBr + 8);
+      } else {
+        valor = path;
     }
     
     let link = document.getElementById('novoLink');
-    link.href = link.href + valor;
+    link.href = link.href + valor.slice(1);
 
     let seconds = 15;
     let interval = setInterval(() => {
